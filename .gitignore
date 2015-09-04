@@ -11,7 +11,7 @@ composer.lock
 database/
 phpunit.xml
 public/
-resources/
+resources/lang/
 server.php
 storage/
 tests/

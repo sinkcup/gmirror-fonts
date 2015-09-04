@@ -16,3 +16,4 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/css', 'Css@show');
+$app->get('/', 'Index@index');
