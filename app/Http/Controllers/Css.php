@@ -15,6 +15,6 @@ class Css extends Controller
             $content = str_replace('http://fonts.gstatic.com/', 'http://fonts-gstatic-com.gmirror.org/', $originalContent);
             \Cache::put('css', $content, 1440);
         }
-        return response($content)->header('Content-Type', 'text/css')->setTtl(86400);
+        return response($content)->header('Content-Type', 'text/css')->header('Cache-Control', 'public, max-age=86400');
     }
 }
