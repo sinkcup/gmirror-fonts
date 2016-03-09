@@ -13,7 +13,6 @@ ADD composer.json /var/www/gmirror-fonts
 RUN composer install --no-autoloader --no-scripts --no-dev
 ADD . /var/www/gmirror-fonts
 RUN composer install --no-dev && \
-  chmod 777 bootstrap/cache && \
   chmod -R 777 storage/ && \
 RUN echo "<?php require_once __DIR__ . '/start.php';?>" > ./resources/views/index.php && \
   markdown README.md >> ./resources/views/index.php && \
