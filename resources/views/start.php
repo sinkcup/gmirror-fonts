@@ -8,5 +8,3 @@
         <link rel="stylesheet" href="http://cdn.staticfile.org/pure/0.5.0/pure-min.css" />
     </head>
     <body>
-    </body>
-</html>
