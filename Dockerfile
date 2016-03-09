@@ -10,7 +10,9 @@ RUN ln -s ../mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 RUN ln -s ~/.composer/vendor/bin/* /usr/local/bin/
 
 ADD composer.json /var/www/gmirror-fonts
+WORKDIR /var/www/gmirror-fonts
 RUN composer install --no-autoloader --no-scripts --no-dev
+
 ADD . /var/www/gmirror-fonts
 RUN composer install --no-dev && \
   chmod -R 777 storage/ && \
