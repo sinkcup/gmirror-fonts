@@ -19,4 +19,5 @@ RUN composer install --no-dev && \
 RUN echo "<?php require_once __DIR__ . '/start.php';?>" > ./resources/views/index.php && \
   markdown README.md >> ./resources/views/index.php && \
   echo "<?php require_once __DIR__ . '/end.php';?>" >> ./resources/views/index.php
+RUN rm -rf /etc/apache2/sites-enabled/*
 ADD apache2/sites-enabled/ /etc/apache2/sites-enabled/
