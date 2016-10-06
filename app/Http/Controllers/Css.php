@@ -22,7 +22,7 @@ class Css extends Controller
             $originFontRootUri = env('ORIGIN_FONT_ROOT_URI');
             $cdnFontRootUri = env('CDN_FONT_ROOT_URI');
             $content = str_replace($originFontRootUri, $cdnFontRootUri, $originContent);
-            \Cache::put('css', $content, 1440);
+            \Cache::put($key, $content, 1440);
         }
         return response($content)->header('Content-Type', 'text/css')->header('Cache-Control', 'public, max-age=86400');
     }
